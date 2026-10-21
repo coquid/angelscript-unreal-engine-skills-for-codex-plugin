@@ -100,9 +100,13 @@ authorized isolated client home can validate installation separately, but does n
 desktop session. See [official local-marketplace behavior](https://developers.openai.com/plugins/build/plugins#how-local-marketplaces-work)
 and [the unconditional user enablement write](https://github.com/openai/codex/blob/c7234c1174b27d9c55199fba0d546dc27d1b0415/codex-rs/core-plugins/src/manager.rs#L2307).
 
-Start a fresh Codex chat in the trusted target project after installation. Verify all six actual skill entries and
-zero plugin lifecycle hooks. Reinstall after source updates to refresh the installed cache; merely editing the source
-or switching its path does not prove the cache refreshed. Avoid a second standalone copy of the same skills.
+After installation, start the intended editor and its MCP server first. Verify the listening port belongs to the
+recorded editor PID, executable, and project; then start a fresh Codex chat in that trusted target project. In the
+observed client, starting a chat while the editor was off loaded the six skills but failed the initial MCP handshake;
+starting the server later did not establish that the existing session had reconnected. Verify all six actual skill
+entries, zero plugin lifecycle hooks, and a successful native MCP call. Reinstall after source updates to refresh
+the installed cache; merely editing the source or switching its path does not prove the cache refreshed. Avoid a
+second standalone copy of the same skills.
 
 ### Optional repository-source installation
 
@@ -163,7 +167,8 @@ With multiple editors, identify the intended instance and use distinct endpoints
 
 ## Verify
 
-`codex mcp list` proves configuration, not live access. In a fresh chat:
+`codex mcp list` proves configuration, not live access. With the intended MCP server ready and its process identity
+verified, start a fresh target-project chat:
 
 > Use $unreal-mcp to inspect the current level and list a few actors without modifying the project.
 

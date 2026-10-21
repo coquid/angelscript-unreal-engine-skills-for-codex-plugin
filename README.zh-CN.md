@@ -87,8 +87,10 @@ enabled = false
 见[官方说明](https://developers.openai.com/plugins/build/plugins#how-local-marketplaces-work)与
 [用户启用写入实现](https://github.com/openai/codex/blob/c7234c1174b27d9c55199fba0d546dc27d1b0415/codex-rs/core-plugins/src/manager.rs#L2307)。
 
-安装后开启目标工程的新会话，确认六个实际 Skill 和零个插件生命周期 Hook。源文件更新后要重新安装刷新缓存，
-只修改 source 路径不能证明缓存已更新。不要同时安装独立的同名 Skill 副本。
+安装后先启动目标 Editor 和 MCP server，核对监听端口所属 PID、可执行文件和工程，再开启受信任目标工程的新会话。
+本次客户端观察到：Editor 关闭时启动会话，六个 Skill 可以加载，但最初 MCP handshake 失败；之后才启动 server
+不能证明原会话已经重新连接。确认六个实际 Skill、零个插件生命周期 Hook，以及一次成功的原生 MCP 调用。
+源文件更新后要重新安装刷新缓存，只修改 source 路径不能证明缓存已更新。不要同时安装独立的同名 Skill 副本。
 
 ### 可选直接仓库安装
 
@@ -136,7 +138,7 @@ codex mcp add unreal-mcp --url http://127.0.0.1:8000/mcp
 
 ## 验证与开发
 
-`codex mcp list` 只证明配置存在。新会话中输入：
+`codex mcp list` 只证明配置存在。先确认目标 MCP server 已就绪且进程身份正确，再开启目标工程新会话：
 
 > 使用 $unreal-mcp 读取当前关卡并列出几个 Actor，不修改工程。
 
