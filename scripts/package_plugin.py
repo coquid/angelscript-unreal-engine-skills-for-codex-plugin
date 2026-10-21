@@ -13,9 +13,9 @@ from validate_plugin import ROOT, validate
 def package_files(root: Path) -> list[Path]:
     names = [
         "plugin.json", ".codex-plugin/plugin.json", ".agents/plugins/marketplace.json",
-        "LICENSE", "UPSTREAM.md", "README.md", "README.zh-CN.md",
+        "LICENSE", "UPSTREAM.md", "README.md",
         "scripts/configure_mcp.py", "scripts/session_context.py", "scripts/sandbox_runner.py",
-        "docs/OPTIONAL_HOOK.md", "docs/VALIDATION.md", "docs/MIGRATION_PLAN.zh-CN.md",
+        "docs/OPTIONAL_HOOK.md", "docs/VALIDATION.md",
         "docs/SANDBOX_VALIDATION.md",
     ]
     files = [root / name for name in names]

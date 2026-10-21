@@ -1,7 +1,5 @@
 # AngelScript Unreal Engine Skills for Codex
 
-[简体中文](README.zh-CN.md)
-
 A community Codex adaptation of [Epic Games' Unreal Engine skills](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin).
 Based on [Idris173's pinned Codex port](https://github.com/Idris173/unreal-engine-skills-for-codex-plugin/commit/a6c25ac96cea4cdfb93029e31423efd109d90895),
 with three generic AngelScript skills. The three ported UE skill directories remain unchanged from that commit.
@@ -201,7 +199,7 @@ not a claim that this fork's CI or authored tests have passed.
 The optional [sandbox runner](docs/SANDBOX_VALIDATION.md) starts and cleans up an explicitly selected independent
 Windows UE project. It does not build native code, execute authored tests, install plugins, or write Codex settings.
 
-See the [historical Idris implementation plan](docs/MIGRATION_PLAN.zh-CN.md), [historical validation record](docs/VALIDATION.md), and
+See the [historical Idris validation record](docs/VALIDATION.md) and
 [upstream maintenance notes](UPSTREAM.md). Public plugin-directory submission is a separate follow-up;
 a GitHub fork is not a directory listing.
 
