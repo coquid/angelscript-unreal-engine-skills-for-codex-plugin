@@ -1,5 +1,7 @@
 # Optional UE session context
 
+[한국어](OPTIONAL_HOOK.ko-KR.md)
+
 The plugin works without hooks. `scripts/session_context.py` reads the hook's `cwd`, walks upward for
 `.uproject` or `GenerateProjectFiles.*`, and returns context only for Unreal directories. It never writes
 configuration, starts an editor, or treats a config file as proof of connectivity. Project filenames and

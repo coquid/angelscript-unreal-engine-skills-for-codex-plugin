@@ -1,5 +1,7 @@
 # Independent sandbox validation
 
+[한국어](SANDBOX_VALIDATION.ko-KR.md)
+
 This is the coquid fork's validation procedure and evidence boundary. The [Idris report](VALIDATION.md) is
 historical third-party evidence, not a pass for this fork. Static/package checks and live editor observations are
 recorded separately. No universal UE version compatibility is claimed.

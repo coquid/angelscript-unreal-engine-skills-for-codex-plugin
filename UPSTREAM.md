@@ -1,5 +1,7 @@
 # Upstream and maintenance
 
+[한국어](UPSTREAM.ko-KR.md)
+
 This community fork preserves Epic's history and adopts one pinned Codex port. It is not an official Epic Games or OpenAI release.
 
 | Role | Repository | Baseline |

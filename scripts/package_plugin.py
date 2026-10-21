@@ -14,9 +14,11 @@ def package_files(root: Path) -> list[Path]:
     names = [
         "plugin.json", ".codex-plugin/plugin.json", ".agents/plugins/marketplace.json",
         "LICENSE", "UPSTREAM.md", "README.md",
+        "UPSTREAM.ko-KR.md", "README.ko-KR.md",
         "scripts/configure_mcp.py", "scripts/session_context.py", "scripts/sandbox_runner.py",
         "docs/OPTIONAL_HOOK.md", "docs/VALIDATION.md",
         "docs/SANDBOX_VALIDATION.md",
+        "docs/OPTIONAL_HOOK.ko-KR.md", "docs/VALIDATION.ko-KR.md", "docs/SANDBOX_VALIDATION.ko-KR.md",
     ]
     files = [root / name for name in names]
     files += [p for p in (root / "skills").rglob("*") if p.is_file() and p.suffix in (".md", ".yaml")]

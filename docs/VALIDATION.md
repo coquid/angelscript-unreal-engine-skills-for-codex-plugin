@@ -1,5 +1,7 @@
 # Historical validation reported by Idris173
 
+[한국어](VALIDATION.ko-KR.md)
+
 This document below is preserved from Idris173 commit `a6c25ac96cea4cdfb93029e31423efd109d90895`.
 It describes that author's earlier port, environment, and reported results. It is **not** a validation claim
 for the coquid fork, its added AngelScript skills, or the current sandbox. Commands and repository names in

@@ -1,5 +1,7 @@
 # AngelScript Unreal Engine Skills for Codex
 
+[한국어](README.ko-KR.md)
+
 A community Codex adaptation of [Epic Games' Unreal Engine skills](https://github.com/EpicGames/unreal-engine-skills-for-claude-code-plugin).
 Based on [Idris173's pinned Codex port](https://github.com/Idris173/unreal-engine-skills-for-codex-plugin/commit/a6c25ac96cea4cdfb93029e31423efd109d90895),
 with three generic AngelScript skills. The three ported UE skill directories remain unchanged from that commit.
