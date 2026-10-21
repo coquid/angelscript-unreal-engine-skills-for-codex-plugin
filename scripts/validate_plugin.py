@@ -43,10 +43,13 @@ def validate(root: Path = ROOT) -> list[str]:
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append(f"Manifest error: {error}")
 
-    expected = {"unreal-mcp", "create-toolset", "unreal-skill"}
+    expected = {
+        "unreal-mcp", "create-toolset", "unreal-skill",
+        "angelscript-in-unreal", "as-integration-tests", "emmsui",
+    }
     paths = list((root / "skills").glob("*/SKILL.md"))
     if {path.parent.name for path in paths} != expected:
-        errors.append("Package must contain the three adapted upstream skills")
+        errors.append("Package must contain the three adapted upstream and three AngelScript skills")
     for path in paths:
         try:
             text = path.read_text(encoding="utf-8")

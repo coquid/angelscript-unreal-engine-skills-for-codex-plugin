@@ -1,0 +1,4 @@
+interface:
+  display_name: "EmmsUI Developer Interfaces"
+  short_description: "Build and inspect AngelScript debug interfaces"
+  default_prompt: "Use $emmsui to build a small developer interface and verify its controls in the rendered editor."

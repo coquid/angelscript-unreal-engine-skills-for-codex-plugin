@@ -1,0 +1,4 @@
+interface:
+  display_name: "AngelScript Integration Tests"
+  short_description: "Test world and latent AngelScript behavior"
+  default_prompt: "Use $as-integration-tests to design meaningful integration coverage for this Unreal AngelScript feature."

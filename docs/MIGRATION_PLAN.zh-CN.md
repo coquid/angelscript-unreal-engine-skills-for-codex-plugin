@@ -1,3 +1,13 @@
+# Historical implementation plan from Idris173
+
+This document below is preserved from Idris173 commit `a6c25ac96cea4cdfb93029e31423efd109d90895`.
+It describes that author's earlier port, environment, and reported results. It is **not** a validation claim
+for the coquid fork, its added AngelScript skills, or the current sandbox. Commands and repository names in
+this historical record belong to the earlier port. Use the current [README](../README.md) for installation
+and [sandbox validation record](SANDBOX_VALIDATION.md) for this fork's own status.
+
+---
+
 # Codex 适配方案
 
 状态：0.1.0 实施与本机验收完成；远程 CI 结果见 GitHub Actions。日期：2026-10-18。

@@ -1,3 +1,13 @@
+# Historical validation reported by Idris173
+
+This document below is preserved from Idris173 commit `a6c25ac96cea4cdfb93029e31423efd109d90895`.
+It describes that author's earlier port, environment, and reported results. It is **not** a validation claim
+for the coquid fork, its added AngelScript skills, or the current sandbox. Commands and repository names in
+this historical record belong to the earlier port. Use the current [README](../README.md) for installation
+and [sandbox validation record](SANDBOX_VALIDATION.md) for this fork's own status.
+
+---
+
 # Validation record
 
 Date: 2026-10-18. Adaptation: **0.1.0**. Upstream: `a6aa73ada02a9fb1f5415bec491f9942c519b297`.

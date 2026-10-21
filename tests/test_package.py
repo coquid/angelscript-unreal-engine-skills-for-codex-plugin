@@ -21,7 +21,12 @@ class PackageTests(unittest.TestCase):
                 names = archive.namelist()
                 self.assertIn("LICENSE", names)
                 self.assertIn("scripts/configure_mcp.py", names)
-                self.assertEqual(len([n for n in names if n.endswith("/SKILL.md")]), 3)
+                self.assertEqual(
+                    {Path(n).parent.name for n in names if n.endswith("/SKILL.md")},
+                    {"unreal-mcp", "create-toolset", "unreal-skill",
+                     "angelscript-in-unreal", "as-integration-tests", "emmsui"},
+                )
+                self.assertIn("scripts/sandbox_runner.py", names)
                 for name in names:
                     self.assertFalse(name.startswith((".git/", ".venv/", ".test-artifacts/", "tests/", "hooks/")))
                     self.assertNotIn("..", Path(name).parts)
